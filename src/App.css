@@ -1,0 +1,32 @@
+.timer {
+  padding: 15px;
+  background-color: #020202;
+  display: grid;
+  grid-template-rows: 125px 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer > .clockface {
+  font-family: monospace;
+  color: #F86B00;
+  font-weight: bold;
+  font-size: 100px;
+  text-align: center;
+}
+
+.timer > .timerPanel {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+@media only screen
+  and (min-device-width: 1024px) {
+    .timer {
+      max-width: 300px;
+    }
+    .timerPanel {
+      grid-template-columns: repeat(5, 1fr);
+    }
+}
