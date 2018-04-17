@@ -18,14 +18,90 @@
 .timer > .timerPanel {
   display: grid;
   grid-template-columns: 1fr;
+  grid-gap: 5px;
+  font-family: Lato, 'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 0.9rem;
+}
+
+.timer > .timerPanel > .presetTimer {
+  display: grid;
+  grid-template-columns: 1fr;
   grid-gap: 10px;
 }
 
-.timer > .timerPanel > .presetButton {
+.presetButton {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  padding: 5px;
-  background-color: white;
+  padding: 7px;
+  background-color: #fefefe;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.07s linear;
+}
+
+.presetButton:hover {
+  box-shadow: 0 0 1rem #ffa500;
+  border-color: #ffa500;
+}
+
+.presetButton > .buttonTitle {
+  font-weight: bold;
+}
+
+.presetButton > .buttonHeatup {
+  text-align: right;
+}
+
+.presetButton > .buttonCooldown {
+  text-align: right;
+}
+
+.presetOptionsButton > img {
+  width: 25px;
+  height: 25px;
+}
+
+.addTimerButton {
+  padding: 7px;
+  text-align: center;
+  font-size: 1.05rem;
+  background-color: #fefefe;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.07s linear;
+}
+
+.addTimerButton:hover {
+  box-shadow: 0 0 1rem #ffa500;
+  border-color: #ffa500;
+}
+
+.newTimerForm {
+  font-family: Lato, 'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-weight: bold;
+  background-color: #fefefe;
+  border-radius: 4px;
+  padding: 7px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 10px;
+}
+
+.newTimerForm > input {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px;
+  text-align: right;
+}
+
+.newTimerForm > input[type=submit] {
+  background-color: #fefefe;
+  color: green;
+  font-weight: bold;
+  font-size: 1.1rem;
+  grid-column: 1 / -1;
+  padding: 4px;
+  text-align: center;
 }
 
 @media only screen
